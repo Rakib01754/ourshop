@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from '../../layout/Main';
+import AllProducts from '../AllProducts';
 import ErrorPage from '../ErrorPage';
 import Home from '../Home';
 import Login from '../Login';
@@ -19,6 +20,10 @@ const Routes = () => {
                 {
                     path: 'login',
                     element: <Login />
+                },
+                {
+                    path: 'allproducts',
+                    element: <AllProducts />
                 }
 
             ]

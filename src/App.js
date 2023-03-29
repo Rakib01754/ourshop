@@ -1,11 +1,10 @@
 import './App.css';
+import Routes from './pages/Routes/Routes';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+    <div>
+      <Routes></Routes>
     </div>
   );
 }
