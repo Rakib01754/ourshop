@@ -28,7 +28,8 @@ const Routes = () => {
                 },
                 {
                     path: 'allproducts',
-                    element: <AllProducts />
+                    element: <AllProducts />,
+                    loader: () => fetch('http://localhost:5000/products')
                 }
 
             ]
