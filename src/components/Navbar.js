@@ -14,7 +14,7 @@ const Navbar = () => {
                         <li className='font-bold'><NavLink to='/allproducts' >All Products</NavLink></li>
                     </ul>
                 </div>
-                <NavLink className="btn btn-ghost normal-case text-2xl">Our Shop</NavLink>
+                <NavLink to="/" className="btn btn-ghost normal-case text-2xl">Our Shop</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
