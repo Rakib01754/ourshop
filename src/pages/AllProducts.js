@@ -4,7 +4,6 @@ import SingleProduct from '../components/SingleProduct';
 
 const AllProducts = () => {
     const products = useLoaderData()
-    console.log(products)
     return (
         <div>
             <h1 className='text-3xl font-bold text-center my-8 border-b-2'>All Products</h1>

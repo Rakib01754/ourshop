@@ -31,18 +31,18 @@ const Routes = () => {
                 {
                     path: 'allproducts',
                     element: <AllProducts />,
-                    loader: () => fetch('http://localhost:5000/products')
+                    loader: () => fetch('https://server-seven-kappa-72.vercel.app/products')
                 },
                 {
                     path: 'product/:id',
                     loader: ({ params }) =>
-                        fetch(`http://localhost:5000/product/${params.id}`),
+                        fetch(`https://server-seven-kappa-72.vercel.app/product/${params.id}`),
                     element: <ProductDetails></ProductDetails>
                 },
                 {
                     path: 'category/:id',
                     loader: ({ params }) =>
-                        fetch(`http://localhost:5000/category/${params.id}`),
+                        fetch(`https://server-seven-kappa-72.vercel.app/category/${params.id}`),
                     element: <SpecificProducts></SpecificProducts>
                 },
 

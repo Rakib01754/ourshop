@@ -5,7 +5,7 @@ import BrandsCard from './BrandsCard';
 const Brands = () => {
     const [phoneBrands, setPhoneBrands] = useState([]);
 
-    const url = "http://localhost:5000/brands"
+    const url = "https://server-seven-kappa-72.vercel.app/brands"
 
     axios.get(url)
         .then(response => {

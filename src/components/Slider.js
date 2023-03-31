@@ -9,7 +9,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import "./Slider.module.css";
+import "./slider.css";
 
 // import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
@@ -21,7 +21,7 @@ const Slider = () => {
     console.log(adItems)
 
     useEffect(() => {
-        axios.get('http://localhost:5000/advertised')
+        axios.get('https://server-seven-kappa-72.vercel.app/advertised')
             .then(response => {
                 const items = response.data;
                 setAdItems(items)
