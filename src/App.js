@@ -1,9 +1,14 @@
 import './App.css';
 import Routes from './pages/Routes/Routes';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div>
+    <div className="App">
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
       <Routes></Routes>
     </div>
   );

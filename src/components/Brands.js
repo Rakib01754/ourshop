@@ -1,18 +1,20 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BrandsCard from './BrandsCard';
 
 const Brands = () => {
     const [phoneBrands, setPhoneBrands] = useState([]);
 
-    const url = "https://server-seven-kappa-72.vercel.app/brands"
+    const url = "http://localhost:5000/brands"
 
-    axios.get(url)
-        .then(response => {
-            const brands = response.data;
-            setPhoneBrands(brands)
-        })
-        .catch(error => (console.log(error)))
+    useEffect(() => {
+        axios.get(url)
+            .then(response => {
+                const brands = response.data;
+                setPhoneBrands(brands)
+            })
+            .catch(error => (console.log(error)))
+    }, [])
 
 
     return (

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,7 +21,7 @@ const Slider = () => {
     console.log(adItems)
 
     useEffect(() => {
-        axios.get('https://server-seven-kappa-72.vercel.app/advertised')
+        axios.get('http://localhost:5000/advertised')
             .then(response => {
                 const items = response.data;
                 setAdItems(items)
@@ -54,7 +54,7 @@ const Slider = () => {
             >
                 {
                     adItems.map(aditem =>
-                        <SwiperSlide key={aditem._key}>
+                        <SwiperSlide key={aditem._id}>
                             <img src={aditem.picture} alt={aditem.name} />
                             <button><Link to={`/product/${aditem._id}`}>See Details</Link></button>
                         </SwiperSlide>)

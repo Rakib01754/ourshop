@@ -8,6 +8,7 @@ import Login from '../Login';
 import Register from '../Register';
 import ProductDetails from '../ProductDetails';
 import SpecificProducts from '../SpecificProducts';
+import PrivateRoute from '../PrivateRoute';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -30,20 +31,20 @@ const Routes = () => {
                 },
                 {
                     path: 'allproducts',
-                    element: <AllProducts />,
-                    loader: () => fetch('https://server-seven-kappa-72.vercel.app/products')
+                    element: <PrivateRoute><AllProducts /></PrivateRoute>,
+                    loader: () => fetch('http://localhost:5000/products')
                 },
                 {
                     path: 'product/:id',
                     loader: ({ params }) =>
-                        fetch(`https://server-seven-kappa-72.vercel.app/product/${params.id}`),
-                    element: <ProductDetails></ProductDetails>
+                        fetch(`http://localhost:5000/product/${params.id}`),
+                    element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
                 },
                 {
                     path: 'category/:id',
                     loader: ({ params }) =>
-                        fetch(`https://server-seven-kappa-72.vercel.app/category/${params.id}`),
-                    element: <SpecificProducts></SpecificProducts>
+                        fetch(`http://localhost:5000/category/${params.id}`),
+                    element: <PrivateRoute><SpecificProducts></SpecificProducts></PrivateRoute>
                 },
 
 
